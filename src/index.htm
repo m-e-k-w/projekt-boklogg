@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boklogg</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <!-- build:css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endbuild -->
+</head>
+<body>
+
+
+
+
+    <header>
+        <h1>Bokblogg</h1>
+    </header>
+    <div class="container">
+        <div class="forms">
+
+        
+        <div class="addform">
+            <h2>Lägg till en bok</h2>
+     
+            <label>ISBN</label><input type="text" id="isbn" placeholder="place"/>
+            <label>bnamn</label><input type="text" id="bnamn" placeholder="place"/>
+            <label>Författare</label><input type="text" id="fnamn" placeholder="place"/>
+            <label> Antal läsningar</label><input type="text" id="antlas" placeholder="place"/>
+            <label> Beskrivning</label><input type="text" id="beskriv" placeholder="place"/>
+        <button id="add">Lägg till </button>
+   
+        </div>
+   
+        <div class="updateform">
+            <h2>Uppdatera en bok</h2>
+            <label>ISBN på boken du vill ändra</label><input type="text" id="isbnny">
+            <label>bnamn</label><input type="text" id="bnamnny">
+            <label>Författare</label><input type="text" id="fnamnny">
+            <label>Antal läsningar</label><input type="text" id="antlasny">
+            <label>Beskrivning</label><input type="text" id="beskrivny">
+            <button id="update">Uppdatera </button>
+        
+            </div>
+           
+        </div>
+  
+        <div id="logg-form" >
+            <h2>Befintliga böcker</h2>
+        </div>
+      
+       
+    </div>
+   
+<footer>
+
+</footer>
+       <!-- build:js -->
+       <script src="js/main.js"></script>
+       <!-- endbuild -->
+</body>
+</html>

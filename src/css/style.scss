@@ -1,0 +1,236 @@
+@import "reset";
+
+@mixin responsiv ($size){ 
+    @if $size == xs{
+    @media (min-width: 267px) and (max-width: 543px) {@content;}
+    }
+
+    @else if $size == sm {
+    @media (min-width: 544px) and (max-width: 731px) {@content;}
+    }
+
+    @else if $size == md {
+    @media (min-width: 732px) and (max-width: 1031px) {@content;}
+    }
+
+    @else if $size == lg {
+    @media (min-width: 1032px) {@content;}
+    }
+}
+
+$primary-color: #f0ceb3;
+$secondary-color: #bbc086;
+$third-color: #da5d61;
+$text-color: #1b2948;
+$decor: #7b0000;
+
+%fonttext{
+    font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+}
+
+%fontheader{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 1200px;
+    background-image: url("../img/monster.JPG")
+ 
+}
+header{
+    background-color: $third-color;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top:40px;
+
+}
+
+h1{
+    margin-left: 15%;
+    margin-top: 15px;
+    font-size: 3.0em;
+    font-weight: 600;
+    font-family: 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
+    @include responsiv(sm){
+        text-align: center;
+        margin-left: 0%;
+    }
+    @include responsiv(xs){
+        text-align: center;
+        margin-left: 0%;
+    }
+}
+h2{
+    margin-left: 10%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    font-weight: 600;
+    @extend %fontheader;
+}
+
+.container{
+    background-color:rgba($primary-color, 0.9);
+    margin: 0px;
+    float: left;
+    width: 100%;
+   
+}
+
+.forms{
+    width: 30%;
+    float: left;
+    margin-bottom: 50px;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-top: 200px;
+    @include responsiv(md){
+        float: none;
+        width: 50%;
+        margin-left: 25%;
+    }
+    @include responsiv(sm){
+        float: none;
+        width: 60%;
+        margin-left: 20%;
+    }
+    @include responsiv(xs){
+        float: none;
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+.addform{
+background-color: $secondary-color;
+box-shadow: 5px 5px 5px;
+padding: 20px;
+
+
+}
+
+.updateform{
+    background-color: $secondary-color;
+    box-shadow: 5px 5px 5px;
+    margin-top: 100px;
+    padding: 20px;
+  
+}
+
+
+button{
+    background-color: $text-color;
+    color: #fff;
+    border: 0px;
+    padding: 8px;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10%;
+}
+
+
+input{
+    display: block;
+    margin-top: 5px;
+    margin-left: 10%;
+    margin-bottom: 15px;
+    width: 70%;
+}
+
+label{
+    margin-left: 10%;
+    margin-top: 30px;
+}
+
+.onebook{
+    border-bottom: $text-color 3px solid;
+    padding-bottom: 30px;
+}
+
+
+#logg-form{
+    background-color: #fff;
+    height: 1200px;
+    overflow: scroll;
+    width: 25%;
+    margin-top: 0px;
+    float: left;
+    padding-left: 2%;
+    padding-right: 2%;
+    @include responsiv(md){
+        float: none;
+        width: 46%;
+        margin-left: 25%;
+        height: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    @include responsiv(sm){
+        float: none;
+        width: 46%;
+        margin-left: 25%;
+        height: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    @include responsiv(xs){
+        float: none;
+        width: 86%;
+        margin-left: 5%;
+        height: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    h2{
+        margin-top: 140px;
+        margin-left: 0px;
+        font-size: 2.1em;
+        @include responsiv(md){
+            margin-top: 30px;
+            margin-bottom: 50px;   
+        }
+        @include responsiv(sm){
+            margin-top: 30px;
+            margin-bottom: 50px; 
+        }
+        @include responsiv(xs){
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+    }
+
+    h3{
+        margin-top: 20px;
+        font-size: 1.5em;
+        @extend %fontheader;
+    }
+    h4{
+        margin-top: 10px;
+        font-size: 1.1em;
+        @extend %fontheader;
+    }
+    h5{
+        margin-top: 10px;
+        font-size: 0.8em;
+        color: $decor;
+        @extend %fontheader;
+    }
+    p{
+        margin-top: 10px;
+        font-size: 1.0em;
+        color: $text-color;
+        @extend %fonttext;
+    }
+
+    
+    button{
+   margin-top: 20px;
+    margin-left: 0%;
+    }
+
+    
+}
