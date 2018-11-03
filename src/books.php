@@ -30,8 +30,8 @@ header("access-control-allow-origin: *");
 
 
 //database connection
-$conn = mysqli_connect("localhost","bokorm","asdfg","boklogg") or die("Error connecting to database.");;
-//$conn = mysqli_connect("studentmysql.miun.se","mawe1310","Sr9IXBnWqixmwEHp","mawe1310") or die("Error connecting to database.");;
+$conn = mysqli_connect("localhost","","","") or die("Error connecting to database.");;
+
 $db_connected = mysqli_select_db($conn, "boklogg"); // Work with the database named 'testrest' 
 
 
